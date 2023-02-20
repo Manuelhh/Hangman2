@@ -6,3 +6,4 @@
 - Typescript
 - SASS
 - HTML
+- React Router V6

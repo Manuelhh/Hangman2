@@ -1,10 +1,9 @@
 import React from "react";
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./PageComponents/Home/Home";
 import { ErrorPage } from "./PageComponents/ErrorPage/ErrorPage";
 import { HangmanPage } from "./PageComponents/HangmanPage/HangmanPage";
-
-import "./App.css";
 
 const App: React.FC = () => {
   return (
