@@ -1,0 +1,34 @@
+// Global variables
+
+$noMargin: 0;
+$standardBoxShadow: inset 0 0 5px black;
+$greenBoxShadow: inset 0 0 5px greenyellow;
+$standardBorderRadius: 1rem;
+$standardFont: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+$greenBackground: greenyellow;
+
+//  INHERETANCE
+
+%totalHeightWidth {
+  height: 100vh;
+  width: 100vw;
+}
+
+%totalPageComponentHeightWidth {
+  height: 95vh;
+  width: 95vw;
+}
+
+%dispalyFlexColumCenter {
+  display: flex;
+  flex-direction: Column;
+  justify-content: center;
+  align-items: center;
+}
+
+%dispalyFlexRowCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

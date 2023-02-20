@@ -1,0 +1,7 @@
+@import "../../sassGlobalFiles/config.scss";
+
+.hangmanPage {
+  @extend %totalPageComponentHeightWidth;
+  box-shadow: $standardBoxShadow;
+  border-radius: $standardBorderRadius;
+}
