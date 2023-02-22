@@ -6,8 +6,8 @@
   box-shadow: $greenBoxShadow;
   border-radius: $standardBorderRadius;
   font-family: $standardFont;
-  background-color: $greenBackground;
   font-size: 3rem;
+  color: $erroMessageColor;
 }
 
 @media screen and (max-width: 700px) {
