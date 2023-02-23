@@ -1,4 +1,4 @@
-.mainConatiner, .outcomeMessageContainer {
+.mainConatiner {
   height: 100%;
   width: 100%;
 }
@@ -8,7 +8,7 @@
   width: 95vw;
 }
 
-.writeContainer, .mainConatiner {
+.keyboardContainer, .writeContainer, .wordToGuessContainer, .animationContainer, .mainConatiner {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -20,12 +20,6 @@
   border-radius: 1rem;
 }
 
-.outcomeMessageContainer {
-  display: none;
-  border-radius: 1rem;
-  box-shadow: inset 0 0 5px black;
-}
-
 .leftContainer {
   height: 100%;
   flex: 1;
@@ -34,13 +28,11 @@
 .animationContainer {
   height: 70%;
   width: 100%;
-  background-color: blueviolet;
 }
 
 .wordToGuessContainer {
   height: 30%;
   width: 100%;
-  background-color: yellow;
 }
 
 .writeContainer {
@@ -49,7 +41,8 @@
 }
 
 .keyboardContainer {
-  background-color: aqua;
-  height: 40%;
+  height: 70%;
   width: 90%;
+  box-shadow: inset 0 0 5px black;
+  border-radius: 1rem;
 }/*# sourceMappingURL=HangmanPage.css.map */

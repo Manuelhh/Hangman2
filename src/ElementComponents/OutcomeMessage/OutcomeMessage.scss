@@ -1,0 +1,8 @@
+@import "../../../src/sassGlobalFiles/config.scss";
+
+.outcomeMessage {
+  display: none;
+  @extend %hundredByHundred;
+  border-radius: $standardBorderRadius;
+  box-shadow: $standardBoxShadow;
+}

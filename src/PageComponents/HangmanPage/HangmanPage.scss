@@ -6,13 +6,6 @@
   border-radius: $standardBorderRadius;
 }
 
-.outcomeMessageContainer {
-  display: none;
-  @extend %hundredByHundred;
-  border-radius: $standardBorderRadius;
-  box-shadow: $standardBoxShadow;
-}
-
 .mainConatiner {
   @extend %hundredByHundred;
   @extend %displayFlexRowCenter;
@@ -26,13 +19,13 @@
 .animationContainer {
   height: 70%;
   width: 100%;
-  background-color: blueviolet;
+  @extend %displayFlexRowCenter;
 }
 
 .wordToGuessContainer {
   height: 30%;
   width: 100%;
-  background-color: yellow;
+  @extend %displayFlexRowCenter;
 }
 
 .writeContainer {
@@ -42,7 +35,9 @@
 }
 
 .keyboardContainer {
-  background-color: aqua;
-  height: 40%;
+  height: 70%;
   width: 90%;
+  @extend %displayFlexRowCenter;
+  box-shadow: $standardBoxShadow;
+  border-radius: $standardBorderRadius;
 }
