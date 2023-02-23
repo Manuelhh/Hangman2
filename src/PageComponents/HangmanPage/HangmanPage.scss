@@ -5,3 +5,44 @@
   box-shadow: $standardBoxShadow;
   border-radius: $standardBorderRadius;
 }
+
+.outcomeMessageContainer {
+  display: none;
+  @extend %hundredByHundred;
+  border-radius: $standardBorderRadius;
+  box-shadow: $standardBoxShadow;
+}
+
+.mainConatiner {
+  @extend %hundredByHundred;
+  @extend %displayFlexRowCenter;
+}
+
+.leftContainer {
+  height: 100%;
+  flex: 1;
+}
+
+.animationContainer {
+  height: 70%;
+  width: 100%;
+  background-color: blueviolet;
+}
+
+.wordToGuessContainer {
+  height: 30%;
+  width: 100%;
+  background-color: yellow;
+}
+
+.writeContainer {
+  height: 100%;
+  flex: 1;
+  @extend %displayFlexRowCenter;
+}
+
+.keyboardContainer {
+  background-color: aqua;
+  height: 40%;
+  width: 90%;
+}

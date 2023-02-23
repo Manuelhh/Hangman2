@@ -1,6 +1,7 @@
 // Global variables
 
 $noMargin: 0;
+$bodyBackgroundColor: whitesmoke;
 $standardBoxShadow: inset 0 0 5px black;
 $greenBoxShadow: inset 0 0 5px greenyellow;
 $standardBorderRadius: 1rem;
@@ -15,19 +16,24 @@ $erroMessageColor: gray;
   width: 100vw;
 }
 
+%hundredByHundred {
+  height: 100%;
+  width: 100%;
+}
+
 %totalPageComponentHeightWidth {
   height: 95vh;
   width: 95vw;
 }
 
-%dispalyFlexColumCenter {
+%displayFlexColumnCenter {
   display: flex;
   flex-direction: Column;
   justify-content: center;
   align-items: center;
 }
 
-%dispalyFlexRowCenter {
+%displayFlexRowCenter {
   display: flex;
   flex-direction: row;
   justify-content: center;

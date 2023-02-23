@@ -1,9 +1,55 @@
+.mainConatiner, .outcomeMessageContainer {
+  height: 100%;
+  width: 100%;
+}
+
 .hangmanPage {
   height: 95vh;
   width: 95vw;
 }
 
+.writeContainer, .mainConatiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .hangmanPage {
   box-shadow: inset 0 0 5px black;
   border-radius: 1rem;
+}
+
+.outcomeMessageContainer {
+  display: none;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 5px black;
+}
+
+.leftContainer {
+  height: 100%;
+  flex: 1;
+}
+
+.animationContainer {
+  height: 70%;
+  width: 100%;
+  background-color: blueviolet;
+}
+
+.wordToGuessContainer {
+  height: 30%;
+  width: 100%;
+  background-color: yellow;
+}
+
+.writeContainer {
+  height: 100%;
+  flex: 1;
+}
+
+.keyboardContainer {
+  background-color: aqua;
+  height: 40%;
+  width: 90%;
 }/*# sourceMappingURL=HangmanPage.css.map */

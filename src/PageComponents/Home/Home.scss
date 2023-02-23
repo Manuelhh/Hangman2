@@ -11,7 +11,7 @@
 }
 
 .title {
-  @extend %dispalyFlexRowCenter;
+  @extend %displayFlexRowCenter;
   font-family: $standardFont;
   height: 45%;
   width: 100%;
@@ -19,7 +19,7 @@
 }
 
 .linkContainer {
-  @extend %dispalyFlexRowCenter;
+  @extend %displayFlexRowCenter;
   border-radius: $standardBorderRadius;
   height: 10%;
   width: 15%;

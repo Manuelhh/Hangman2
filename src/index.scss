@@ -2,10 +2,10 @@
 
 body {
   margin: $noMargin;
-  background-color: whitesmoke;
+  background-color: $bodyBackgroundColor;
 }
 
 #root {
   @extend %totalHeightWidth;
-  @extend %dispalyFlexColumCenter;
+  @extend %displayFlexColumCenter;
 }
