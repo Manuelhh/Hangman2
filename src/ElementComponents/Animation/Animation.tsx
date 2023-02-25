@@ -12,8 +12,6 @@ type AnimationProps = {
   numberOfGuesses: number;
 };
 
-const bodyParts: string[] = [cero, one, two, three, four, five, six];
-
 export const Animation: React.FC<AnimationProps> = ({
   numberOfGuesses,
 }: AnimationProps) => {
