@@ -4,11 +4,13 @@ import "./WordToGuess.css";
 type WordToGuessProps = {
   wordToGuess: string;
   guessedLetters: string[];
+  reveal: boolean;
 };
 
 export const WordToGuess: React.FC<WordToGuessProps> = ({
   wordToGuess,
   guessedLetters,
+  reveal,
 }: WordToGuessProps) => {
   return (
     <div className="WTGContainer">
@@ -16,9 +18,10 @@ export const WordToGuess: React.FC<WordToGuessProps> = ({
         <span className="letter" key={i}>
           <span
             style={{
-              visibility: guessedLetters.includes(letter)
-                ? "visible"
-                : "hidden",
+              visibility:
+                guessedLetters.includes(letter) || reveal
+                  ? "visible"
+                  : "hidden",
             }}
           >
             {letter}

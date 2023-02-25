@@ -6,20 +6,29 @@ import { Home } from "./PageComponents/Home/Home";
 import { ErrorPage } from "./PageComponents/ErrorPage/ErrorPage";
 import { HangmanPage } from "./PageComponents/HangmanPage/HangmanPage";
 import words from "./wordList.json";
+import { createDocumentRegistry } from "typescript";
 
 const App: React.FC = () => {
-  const [wordToGuess, setWordToGuess] = useState<string>((): string => {
+  const getWord = () => {
     return words[Math.floor(Math.random() * words.length)];
-  });
+  };
+
+  const [wordToGuess, setWordToGuess] = useState<string>(getWord());
 
   const [guessedLetters, setGuessesLetters] = useState<string[]>([]);
 
-  const incorrectLetters: string[] = guessedLetters.filter(
+  let incorrectLetters: string[] = guessedLetters.filter(
     (letter: string) => !wordToGuess.includes(letter)
   );
 
+  let isLoser = incorrectLetters.length >= 6;
+
+  let isWinner = wordToGuess
+    .split("")
+    .every((letter) => guessedLetters.includes(letter));
+
   const addGuessedLetter = (key: string) => {
-    if (guessedLetters.includes(key)) return;
+    if (guessedLetters.includes(key) || isLoser || isWinner) return;
 
     setGuessesLetters((currentLetters) => [...currentLetters, key]);
   };
@@ -32,13 +41,20 @@ const App: React.FC = () => {
       e.preventDefault();
       addGuessedLetter(key);
     };
-
     document.addEventListener("keypress", handler);
-
     return () => {
       document.removeEventListener("keypress", handler);
     };
   }, [guessedLetters]);
+
+  const handleRestart = () => {
+    document.querySelector(".outcomeMessage")?.classList.add("hidden");
+    setWordToGuess(getWord());
+    setGuessesLetters([]);
+    incorrectLetters = [];
+    isLoser = false;
+    isWinner = false;
+  };
 
   return (
     <Routes>
@@ -55,6 +71,10 @@ const App: React.FC = () => {
             )}
             inactiveLetters={incorrectLetters}
             addGuessedLetter={addGuessedLetter}
+            isWinner={isWinner}
+            isLoser={isLoser}
+            reveal={isLoser}
+            handleRestart={handleRestart}
           />
         }
       />

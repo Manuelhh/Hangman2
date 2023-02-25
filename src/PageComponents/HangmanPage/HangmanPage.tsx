@@ -11,6 +11,10 @@ type AllProps = {
   activeLetters: string[];
   inactiveLetters: string[];
   addGuessedLetter: (letter: string) => void;
+  isWinner: boolean;
+  isLoser: boolean;
+  reveal?: boolean;
+  handleRestart: () => void;
 };
 
 export const HangmanPage: React.FC<AllProps> = ({
@@ -20,11 +24,19 @@ export const HangmanPage: React.FC<AllProps> = ({
   activeLetters,
   inactiveLetters,
   addGuessedLetter,
+  isWinner,
+  isLoser,
+  reveal = false,
+  handleRestart,
 }: AllProps) => {
   return (
     <div className="hangmanPage">
       <div className="mainConatiner">
-        <OutcomeMessage />
+        <OutcomeMessage
+          isWinner={isWinner}
+          isLooser={isLoser}
+          handleRestart={handleRestart}
+        />
         <div className="leftContainer">
           <div className="animationContainer">
             <Animation numberOfGuesses={numberOfGuesses} />
@@ -33,6 +45,7 @@ export const HangmanPage: React.FC<AllProps> = ({
             <WordToGuess
               wordToGuess={wordToGuess}
               guessedLetters={guessedLetters}
+              reveal={reveal}
             />
           </div>
         </div>
